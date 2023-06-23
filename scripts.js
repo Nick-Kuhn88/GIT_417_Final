@@ -22,4 +22,4 @@ let cartTotal = 0;
         cartTotal = 0;
         totalAmount.textContent = '$' + cartTotal.toFixed(2);
       }
-    );
+    });
