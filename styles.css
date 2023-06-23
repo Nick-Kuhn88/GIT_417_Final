@@ -1,6 +1,8 @@
 body {
     width: 1280px;
     margin: 0 auto; 
+    background-color: #f7f5f5; /* Cream background color */
+    color: #4527a0; /* Deep purple text color */
   }
 
 /* navbar */
@@ -23,9 +25,9 @@ header {
   
   ul.navbar li a {
     display: block;
-    color: #333;
+    color: #4527a0; /* Deep purple text color */
     text-align: center;
-    padding: 14px 30px;
+    padding: 14px 16px;
     text-decoration: none;
   }
   
@@ -34,6 +36,10 @@ header {
   }
   
   h1 {
-    display: inline-block;
     text-align: left;
+  }
+  
+  .dark-mode {
+    background-color: #4527a0; /* Deep purple background color */
+    color: #f7f5f5; /* Cream text color */
   }
