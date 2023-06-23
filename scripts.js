@@ -1,14 +1,14 @@
 "use strict";
 
 // Cost calculator functionality 
-const addToCartButtons = document.querySelectorAll('.add-to-cart');
-const totalAmount = document.getElementById('totalAmount');
-const checkoutBtn = document.getElementById('checkoutBtn');
+let addToCartButtons = document.querySelectorAll('.add-to-cart');
+let totalAmount = document.getElementById('totalAmount');
+let checkoutBtn = document.getElementById('checkoutBtn');
 let cartTotal = 0;
     
     addToCartButtons.forEach(button => {
       button.addEventListener('click', () => {
-        const productPrice = parseFloat(button.previousElementSibling.textContent.replace('$', ''));
+        let productPrice = parseFloat(button.previousElementSibling.textContent.replace('$', ''));
         cartTotal += productPrice;
         totalAmount.textContent = '$' + cartTotal.toFixed(2);
       });
