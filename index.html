@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <h1>RKK Voice and Acting</h1>
+        <ul class="navbar">
+            <li><a href="#about">About</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#rates">Rates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+  <section>
+    <h2>Section 1</h2>
+    <!-- Content for section 1 -->
+  </section>
+  
+  <section>
+    <h2>Section 2</h2>
+    <!-- Content for section 2 -->
+  </section>
+  
+  <section>
+    <h2>Section 3</h2>
+    <!-- Content for section 3 -->
+  </section>
+  
+  <section>
+    <h2>Contact Form</h2>
+    <form id="contactForm" action="submit.php" method="POST">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required><br><br>
+      
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="tel" id="phoneNumber" name="phoneNumber"><br><br>
+      
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required><br><br>
+      
+      <label for="comments">Comments:</label>
+      <textarea id="comments" name="comments" rows="4" required></textarea><br><br>
+      
+      <p>Contact Preference:</p>
+      <input type="radio" id="phone" name="contactPreference" value="phone">
+      <label for="phone">Phone</label><br>
+      
+      <input type="radio" id="emailRadio" name="contactPreference" value="email">
+      <label for="emailRadio">Email</label><br><br>
+      
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+</body>
+</html>
