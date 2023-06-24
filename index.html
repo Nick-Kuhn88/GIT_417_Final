@@ -3,31 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <title>RKK Voice and Acting Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fondamento:ital@1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script defer src="scripts.js"></script>
 </head>
 <body>
     <header>
-        <h1>RKK Voice and Acting</h1>
+        <h1>RKK Voice and Acting Studio</h1>
         <ul class="navbar">
             <li><a href="#about">About</a></li>
             <li><a href="#rates">Rates</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <button id="darkModeBtn">Toggle Mode</button>
+        <button id="darkModeBtn"><img src="images/light-dark.svg" alt=""></button>
     </header>
+  <section id="intro">
+    <h2>Join the Fastest Growing Performing Arts Studio in the Valley</h2>
+    <p>RKK Voice and Acting Studio provides children with the tools they need to grow and develop within the 
+        performing arts.</p> 
+    <p>Sign up for a lesson today!</p>
+  </section>  
   <section id="about">
     <h2>About</h2>
-    <p>RENEE KATHLEEN KOHER is originally from Chicago, IL
-        and received her BFA in Musical Theater from the Hartt School of
-        Music in Connecticut. Renee has been teaching voice and acting for
-        over 20 years. She moved to the valley 6 years ago and started RKK
-        voice and Acting Studio, where she has had the pleasure of training
-        so many incredible performers across the country. Renee also has
-        directed multiple youth productions as well as performed all over
-        the world. Please follow her on Social Media at RKK Voice and
-        Acting Studio.</p>
-    <p>Refer to the section below </p>
+    <div id="about-content">
+        <img src="images/Renee_Headshot.jpg" alt="Renee Kathleen Koher">
+        <p>RENEE KATHLEEN KOHER is originally from Chicago, IL
+            and received her BFA in Musical Theater from the Hartt School of
+            Music in Connecticut. Renee has been teaching voice and acting for
+            over 20 years. She moved to the valley 6 years ago and started RKK
+            voice and Acting Studio, where she has had the pleasure of training
+            so many incredible performers across the country. Renee also has
+            directed multiple youth productions as well as performed all over
+            the world. Please follow her on Social Media at RKK Voice and
+            Acting Studio.</p>
+        <img src="images/recital.jpg" alt="recital">
+    </div>
   </section>
   
   <section id="rates">
@@ -35,26 +50,26 @@
     <!-- Content for section 2 -->
     <div id="products">
         <div class="product">
-            <img src="product1.jpg" alt="Product 1">
+            <img src="images/30min.svg" alt="30 minute lesson">
             <p>30 Minute Lesson</p>
             <p>$30</p>
             <button class="add-to-cart">Add to Cart</button>
         </div>
         
         <div class="product">
-            <img src="product2.jpg" alt="Product 2">
+            <img src="images/45min.svg" alt="45 minute lesson">
             <p>45 Minute Lesson</p>
             <p>$45</p>
             <button class="add-to-cart">Add to Cart</button>
         </div>
         
         <div class="product">
-            <img src="product3.jpg" alt="Product 3">
+            <img src="images/60min.svg" alt="60 minute lesson">
             <p>60 Minute Lesson</p>
             <p>$60</p>
             <button class="add-to-cart">Add to Cart</button>
         </div>
-    </div>
+    </div><br>
     <div class="total">
         <p>Cart: $<span id="cartTotal">0.00</span></p>
         <p>Tax Rate: 8%</p>
@@ -87,7 +102,7 @@
           <div class="error" id="commentsError"></div>
         </div>
         <div class="form-group">
-          <label>Preferred Contact Method:</label>
+          <label>Preferred Contact Method:</label><br>
           <input type="radio" id="contactPhone" name="contactMethod" value="phone" required>
           <label for="contactPhone">Phone</label>
           <input type="radio" id="contactEmail" name="contactMethod" value="email" required>
