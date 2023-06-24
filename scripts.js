@@ -8,6 +8,7 @@ function darkMode() {
     let element = document.body;
     element.classList.toggle("dark-mode");
   }
+  darkModeButton.addEventListener('click', darkMode);
 
 // Cost calculator functionality 
 const addToCartButtons = document.querySelectorAll('.add-to-cart');
@@ -43,9 +44,7 @@ checkoutBtn.addEventListener('click', () => {
   }
 });
 
-darkModeButton.addEventListener('click', darkMode);
-
-// JavaScript for form validation and submission
+// form validation and submission
 const contactForm = document.getElementById('contactForm');
 const fullNameInput = document.getElementById('fullName');
 const phoneNumberInput = document.getElementById('phoneNumber');
@@ -66,7 +65,7 @@ contactForm.addEventListener('submit', (e) => {
   resetErrorMessages();
 
   // Validate form fields
-  const isValid = validateForm();
+  let isValid = validateForm();
 
   if (isValid) {
     // Create customer object
@@ -93,22 +92,23 @@ function resetErrorMessages() {
   });
 }
 
+// Validates each input
 function validateForm() {
   let isValid = true;
 
-  const fullNameRegex = /^[a-zA-Z\s]+$/;
+  let fullNameRegex = /^[a-zA-Z\s]+$/;
   if (!fullNameRegex.test(fullNameInput.value)) {
     displayErrorMessage(fullNameInput, 'Please enter a valid full name (letters and spaces only).');
     isValid = false;
   }
 
-  const phoneNumberRegex = /^\d{10}$/;
+  let phoneNumberRegex = /^\d{10}$/;
   if (!phoneNumberRegex.test(phoneNumberInput.value)) {
     displayErrorMessage(phoneNumberInput, 'Please enter a valid 10-digit phone number.');
     isValid = false;
   }
 
-  const emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+  let emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
   if (!emailRegex.test(emailInput.value)) {
     displayErrorMessage(emailInput, 'Please enter a valid email address.');
     isValid = false;
@@ -119,7 +119,7 @@ function validateForm() {
     isValid = false;
   }
 
-  const selectedContactMethod = document.querySelector('input[name="contactMethod"]:checked');
+  let selectedContactMethod = document.querySelector('input[name="contactMethod"]:checked');
   if (!selectedContactMethod) {
     displayErrorMessage(contactMethodInputs[0], 'Please select a preferred contact method.');
     isValid = false;
@@ -129,7 +129,7 @@ function validateForm() {
 }
 
 function displayErrorMessage(inputElement, errorMessage) {
-  const errorElement = inputElement.nextElementSibling;
+  let errorElement = inputElement.nextElementSibling;
   errorElement.textContent = errorMessage;
 }
 

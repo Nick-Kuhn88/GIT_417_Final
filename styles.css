@@ -63,6 +63,10 @@ section#calculator {
     
   }
 
+  /* Contact Form styles */
+  #contact{
+    margin-bottom: 30px;
+  }
   /* CSS for form validation */
 .error {
     color: red;
