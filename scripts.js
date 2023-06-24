@@ -30,8 +30,8 @@ addToCartButtons.forEach(button => {
 });
 
 function updateTotalAmount() {
-  const taxRate = 8;
-  const taxAmount = (cartTotal * taxRate) / 100;
+  const taxRate = .08;
+  const taxAmount = cartTotal * taxRate;
   const totalAmount = cartTotal + taxAmount;
   totalAmountElement.textContent = totalAmount.toFixed(2);
 }
