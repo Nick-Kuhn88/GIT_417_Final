@@ -1,8 +1,8 @@
 "use strict";
 
 // light/dark mode functionality
-// const body = document.querySelector('body');
-// const darkModeButton = document.getElementById('darkModeBtn');
+const body = document.querySelector('body');
+const darkModeButton = document.getElementById('darkModeBtn');
 
 // darkModeButton.addEventListener('click', () => {
 //   body.classList.toggle('dark-mode');
