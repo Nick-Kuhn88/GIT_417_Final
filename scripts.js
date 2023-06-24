@@ -4,10 +4,6 @@
 const body = document.querySelector('body');
 const darkModeButton = document.getElementById('darkModeBtn');
 
-// darkModeButton.addEventListener('click', () => {
-//   body.classList.toggle('dark-mode');
-// });
-
 function darkMode() {
     let element = document.body;
     element.classList.toggle("dark-mode");
