@@ -46,9 +46,11 @@ header {
 
   /* CSS for the cost calculator */
 section#calculator {
-    
+
   }
-  
+  .products{
+    display: flex;
+  }
   .product {
 
   }
@@ -59,4 +61,13 @@ section#calculator {
   
   .checkout-btn {
     
+  }
+
+  /* CSS for form validation */
+.error {
+    color: red;
+  }
+  
+  .hidden {
+    display: none;
   }

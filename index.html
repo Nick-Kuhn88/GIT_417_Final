@@ -18,33 +18,43 @@
     </header>
   <section id="about">
     <h2>About</h2>
-    <!-- Content for section 1 -->
+    <p>RENEE KATHLEEN KOHER is originally from Chicago, IL
+        and received her BFA in Musical Theater from the Hartt School of
+        Music in Connecticut. Renee has been teaching voice and acting for
+        over 20 years. She moved to the valley 6 years ago and started RKK
+        voice and Acting Studio, where she has had the pleasure of training
+        so many incredible performers across the country. Renee also has
+        directed multiple youth productions as well as performed all over
+        the world. Please follow her on Social Media at RKK Voice and
+        Acting Studio.</p>
+    <p>Refer to the section below </p>
   </section>
   
   <section id="rates">
     <h2>Rates</h2>
     <!-- Content for section 2 -->
-    <div class="product">
-        <img src="product1.jpg" alt="Product 1">
-        <p>30 Minute Lesson</p>
-        <p>$30</p>
-        <button class="add-to-cart">Add to Cart</button>
+    <div id="products">
+        <div class="product">
+            <img src="product1.jpg" alt="Product 1">
+            <p>30 Minute Lesson</p>
+            <p>$30</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <img src="product2.jpg" alt="Product 2">
+            <p>45 Minute Lesson</p>
+            <p>$45</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <img src="product3.jpg" alt="Product 3">
+            <p>60 Minute Lesson</p>
+            <p>$60</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
     </div>
-    
-    <div class="product">
-        <img src="product2.jpg" alt="Product 2">
-        <p>45 Minute Lesson</p>
-        <p>$45</p>
-        <button class="add-to-cart">Add to Cart</button>
-    </div>
-    
-    <div class="product">
-        <img src="product3.jpg" alt="Product 3">
-        <p>60 Minute Lesson</p>
-        <p>$60</p>
-        <button class="add-to-cart">Add to Cart</button>
-    </div>
-    
     <div class="total">
         <p>Cart: $<span id="cartTotal">0.00</span></p>
         <p>Tax Rate: 8%</p>
@@ -55,28 +65,47 @@
   
   <section id="contact">
     <h2>Contact Form</h2>
-    <form id="contactForm" action="submit.php" method="POST">
-      <label for="fullName">Full Name:</label>
-      <input type="text" id="fullName" name="fullName" required><br><br>
-      
-      <label for="phoneNumber">Phone Number:</label>
-      <input type="tel" id="phoneNumber" name="phoneNumber"><br><br>
-      
-      <label for="email">Email Address:</label>
-      <input type="email" id="email" name="email" required><br><br>
-      
-      <label for="comments">Comments:</label>
-      <textarea id="comments" name="comments" rows="4" required></textarea><br><br>
-      
-      <p>Contact Preference:</p>
-      <input type="radio" id="phone" name="contactPreference" value="phone" checked>
-      <label for="phone">Phone</label><br>
-      
-      <input type="radio" id="emailRadio" name="contactPreference" value="email">
-      <label for="emailRadio">Email</label><br><br>
-      
-      <input type="submit" value="Submit">
-    </form>
+    <form id="contactForm">
+        <div class="form-group">
+          <label for="fullName">Full Name:</label>
+          <input type="text" id="fullName" name="fullName" required>
+          <div class="error" id="fullNameError"></div>
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number:</label>
+          <input type="text" id="phoneNumber" name="phoneNumber" required>
+          <div class="error" id="phoneNumberError"></div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required>
+          <div class="error" id="emailError"></div>
+        </div>
+        <div class="form-group">
+          <label for="comments">Comments:</label>
+          <textarea id="comments" name="comments" required></textarea>
+          <div class="error" id="commentsError"></div>
+        </div>
+        <div class="form-group">
+          <label>Preferred Contact Method:</label>
+          <input type="radio" id="contactPhone" name="contactMethod" value="phone" required>
+          <label for="contactPhone">Phone</label>
+          <input type="radio" id="contactEmail" name="contactMethod" value="email" required>
+          <label for="contactEmail">Email</label>
+          <div class="error" id="contactMethodError"></div>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="thankYouMessage" class="hidden">
+        <h3>Thank you for your submission!</h3>
+        <ul>
+          <li><strong>Full Name:</strong> <span id="submittedFullName"></span></li>
+          <li><strong>Phone Number:</strong> <span id="submittedPhoneNumber"></span></li>
+          <li><strong>Email Address:</strong> <span id="submittedEmail"></span></li>
+          <li><strong>Comments:</strong> <span id="submittedComments"></span></li>
+          <li><strong>Preferred Contact Method:</strong> <span id="submittedContactMethod"></span></li>
+        </ul>
+      </div>
   </section>
 </body>
 </html>
