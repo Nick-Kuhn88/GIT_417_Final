@@ -17,22 +17,25 @@ const totalAmountElement = document.getElementById('totalAmount');
 const checkoutBtn = document.getElementById('checkoutBtn');
 let cartTotal = 0;
 
+// adding event listener and function to add amount when item button is clicked
 addToCartButtons.forEach(button => {
   button.addEventListener('click', () => {
-    const productPrice = parseFloat(button.previousElementSibling.textContent.replace('$', ''));
+    let productPrice = parseFloat(button.previousElementSibling.textContent.replace('$', ''));
     cartTotal += productPrice;
-    cartTotalElement.textContent = cartTotal.toFixed(2);
+    cartTotalElement.textContent = cartTotal.toFixed(2); //rounding to two decimal places since it's currency
     updateTotalAmount();
   });
 });
-
+// update total after adding 8% tax
 function updateTotalAmount() {
   const taxRate = .08;
-  const taxAmount = cartTotal * taxRate;
-  const totalAmount = cartTotal + taxAmount;
-  totalAmountElement.textContent = totalAmount.toFixed(2);
+  let taxAmount = cartTotal * taxRate;
+  let totalAmount = cartTotal + taxAmount;
+  totalAmountElement.textContent = totalAmount.toFixed(2); //rounding to two decimal places since it's currency
 }
 
+//adding event listener and logic to checkout button 
+// makes sure cart is not empty
 checkoutBtn.addEventListener('click', () => {
   if (cartTotal === 0) {
     alert('Please add something to the cart before checking out.');
@@ -45,6 +48,7 @@ checkoutBtn.addEventListener('click', () => {
 });
 
 // form validation and submission
+// get every form input
 const contactForm = document.getElementById('contactForm');
 const fullNameInput = document.getElementById('fullName');
 const phoneNumberInput = document.getElementById('phoneNumber');
@@ -127,12 +131,12 @@ function validateForm() {
 
   return isValid;
 }
-
+//displays error message in the empty div
 function displayErrorMessage(inputElement, errorMessage) {
   let errorElement = inputElement.nextElementSibling;
   errorElement.textContent = errorMessage;
 }
-
+//display the thank you message and customer object
 function displayThankYouMessage(customer) {
   thankYouMessage.classList.remove('hidden');
   submittedFullName.textContent = customer.fullName;
