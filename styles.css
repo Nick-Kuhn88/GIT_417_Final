@@ -129,9 +129,6 @@ header {
   .dark-mode {
     background-color: #4527a0; /* Deep purple background color */
     color: #f7f5f5; /* Cream text color */
-    .navbar li a{
-        color: #f7f5f5;
-    }
   }
   button img {
     width: 50px;

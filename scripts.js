@@ -5,8 +5,8 @@ const body = document.querySelector('body');
 const darkModeButton = document.getElementById('darkModeBtn');
 
 function darkMode() {
-    let element = document.body;
-    element.classList.toggle("dark-mode");
+    let element1 = document.body;
+    element1.classList.toggle("dark-mode");
   }
   darkModeButton.addEventListener('click', darkMode);
 
